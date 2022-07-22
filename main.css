@@ -1,0 +1,114 @@
+body{ 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(./imgs/layered-waves-haikei.svg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+
+.container{
+    border-radius: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(254, 214, 2);
+    max-width: 650px;
+    height: 80vh;
+    overflow: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+html h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.choicescolumn{
+    display: block;
+    position: relative;
+}
+
+.row{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+@media only screen and (min-width: 650px) {
+    .row{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+  }
+
+.check{
+    padding: .5rem;
+}
+
+.correct{ 
+    border-radius: .5rem;
+    animation: fadeYes 3s;
+
+} 
+@keyframes fadeYes {
+  0% { background-color: transparent; }
+  50% { background-color: rgb(165, 216, 88); }
+  100% {background-color: transparent;}
+}
+
+.incorrect{ 
+    border-radius: .5rem;
+    animation: fadeNo 3s;
+} 
+@keyframes fadeNo {
+    0% { background-color: transparent; }
+    50% { background-color: rgb(190, 109, 122); }
+    100% {background-color: transparent;}
+  }
+
+input { 
+    border-radius: 40px;
+    padding: .5rem;
+    border-style: solid;
+    border-color: #f9c301;
+    background-color: #faf9de;
+} 
+input[type=text]:focus{ 
+    outline-color: #000000;
+    background-color: white;
+    
+}
+button {
+    font-family:monospace;
+    border-style: solid;
+    border-color: #f9c301;
+    border-radius: 40px;
+    color: #000000;
+    background: #ffee00;
+    padding: .5rem;
+    text-decoration: none;
+  }
+  
+button:hover {
+    background: #fcf9a4;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+hr {
+    border: 0;
+    border-bottom: 2px dotted rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 3em;
+  height: 1.25rem;
+  accent-color: yellow;
+}
